@@ -2,6 +2,8 @@
 <head><title>Cloud Download</title></head>
 <body>
 <?php
+include "downspeed.php";
+echo "<br>";
 if(!file_exists("downloads")){mkdir ("downloads");}
 $bf= disk_free_space("downloads/");
 $bt = disk_total_space("/");
@@ -12,7 +14,7 @@ function HumanSize($Bytes){
     $Bytes/=1024;
     $Index++;
   }
-  echo("Cloud space left: ".$Bytes." ".$Type[$Index]."bytes");
+  echo("Cloud space left: ". round($Bytes, 2)." ".$Type[$Index]."bytes");
 }
 HumanSize($bf);
 ?>
