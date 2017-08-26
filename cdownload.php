@@ -1,7 +1,7 @@
 <?php
+If(empty($_POST["url"])){header('Location: index.php'); exit;}
 set_time_limit(0);
 $url = $_POST["url"];
-If(empty($url)){header('Location: index.php'); exit;}
 $email = $_POST["email"];
 $domain = $_SERVER['SERVER_NAME'];
 $filename = basename($url);

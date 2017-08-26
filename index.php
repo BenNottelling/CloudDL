@@ -3,6 +3,7 @@
 <body>
 <?php
 include "downspeed.php";
+echo "Server's speed is: $speed MB/s";
 echo "<br>";
 if(!file_exists("downloads")){mkdir ("downloads");}
 $bf= disk_free_space("downloads/");
