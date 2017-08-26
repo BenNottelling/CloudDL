@@ -5,6 +5,7 @@ If(empty($url)){header('Location: index.php'); exit;}
 $email = $_POST["email"];
 $domain = $_SERVER['SERVER_NAME'];
 $filename = basename($url);
+include "shareurl.php"; //for shared URLs (like from dropbox)
 
 echo "Downloading $url "; 
 echo "<br>";
