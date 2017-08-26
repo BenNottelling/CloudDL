@@ -1,5 +1,5 @@
 <html>
-<head><title>Cloud Download</title></head>
+<head><title>CloudDL</title></head>
 <body>
 <?php
 include "downspeed.php";
@@ -24,6 +24,7 @@ HumanSize($bf);
 	My email (to notify, optional): <input type="text" name="email"><br>
 <input type="submit">
 </form>
+<a href='https://github.com/BenNottelling/CloudDL'>Powered by CloudDL</a>
 
 </body>
 </html>
