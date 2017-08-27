@@ -10,7 +10,7 @@ A small php application for cloud downloading.
 
 ### What non-direct links can it handle?
 * Dropbox
-* Google Drive
+* Google Drive - File names are NOT handled correctly
 
 ## Installing
 Just upload all of the .php files to your server, that's it!

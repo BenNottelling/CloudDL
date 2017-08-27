@@ -8,7 +8,7 @@ if ($downdomain == 'dropbox.com') { //If it's dropbox we want it to end with "?d
 }
 
 if ($downdomain == 'drive.google.com') { //If it's google drive we need to get the file ID then pass that into the download URL (this will cause an issue with links to a download (already parsed)
-	$fileid = str_replace (['https://drive.google.com/file/d/','http://drive.google.com/file/d/', '/edit?usp=sharing', '/view?usp=sharing'], '', $url);
+	$fileid = str_replace (['https://drive.google.com/file/d/','http://drive.google.com/file/d/', '/edit?usp=sharing', '/view?usp=sharing', 'https://drive.google.com/open?id='], '', $url);
 	$url = 'https://drive.google.com/uc?export=download&id=' . $fileid;
 }
 ?>
