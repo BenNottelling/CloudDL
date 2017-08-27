@@ -4,6 +4,13 @@
 A small php application for cloud downloading.
 
 ## What it can do
-* Correctly handle dropbox shared URLs (ending in '?dl=0', '?dl=1', and '?')
+* Supports some cloud storage
 * Email link when the download is complete
 * Delete all downloads with a cron job (rmall.php, please rename it!)
+
+### What non-direct links can it handle?
+* Dropbox
+* Google Drive
+
+## Installing
+Just upload all of the .php files to your server, that's it!
