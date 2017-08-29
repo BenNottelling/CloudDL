@@ -8,16 +8,16 @@ $domain = $_SERVER['SERVER_NAME'];
 $filename = basename($url);
 include "shareurl.php"; //for shared URLs (like from dropbox)
 
+file_put_contents("downloads/$filename", fopen("$url", 'r'), LOCK_EX);
+include 'filetype.php';
+rename("downloads/$filename", "downloads/$newfilename");
 echo "Downloading $url "; 
 echo "<br>";
 echo "to ";
 echo "<br>";
-$downloadedto = 'http://' . $domain . '/downloads/' . $filename;
+$downloadedto = 'http://' . $domain . '/downloads/' . $newfilename;
 
 echo "<a href='$downloadedto'>$downloadedto</a>";
-
-
-file_put_contents("downloads/$filename", fopen("$url", 'r'), LOCK_EX);
 
 if(!empty($email)){
 	mail ($email, "Your cloud download is complete!", "Good news! Your cloud download of $filename is finished! please download it soon before it is auto deleted from our server $downloadedto");

@@ -7,10 +7,11 @@ A small php application for cloud downloading.
 * Supports some cloud storage
 * Email link when the download is complete
 * Delete all downloads with a cron job (rmall.php, please rename it!)
+* Detect and correct for some file types
 
 ### What non-direct links can it handle?
 * Dropbox
-* Google Drive - File names are NOT handled correctly
+* Google Drive
 
 ## Installing
 Just upload all of the .php files to your server, that's it!
