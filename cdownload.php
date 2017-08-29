@@ -8,6 +8,7 @@ $domain = $_SERVER['SERVER_NAME'];
 $filename = basename($url);
 include "shareurl.php"; //for shared URLs (like from dropbox)
 
+
 file_put_contents("downloads/$filename", fopen("$url", 'r'), LOCK_EX);
 include 'filetype.php';
 rename("downloads/$filename", "downloads/$newfilename");
