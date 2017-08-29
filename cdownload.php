@@ -1,6 +1,6 @@
 <?php
 If(empty($_POST["url"])){header('Location: index.php'); exit;}
-set_time_limit(0);
+set_time_limit(12*31*24*60*60); //372 days if you are wondering, in seconds.
 $url = $_POST["url"];
 $email = $_POST["email"];
 $domain = $_SERVER['SERVER_NAME'];
