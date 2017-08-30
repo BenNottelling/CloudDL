@@ -8,11 +8,13 @@ $domain = $_SERVER['SERVER_NAME'];
 $filename = basename($url);
 include "shareurl.php"; //for shared URLs (like from dropbox)
 
-
 $filename = str_replace ([' ','%', '?', '[' , ']', '-','&', '^', '*' , '/'], '', $filename);
 file_put_contents("downloads/$filename", fopen("$url", 'r'), LOCK_EX);
-include 'filetype.php';
+
+include 'filetype.php';//Filetype handling here and below 2
 rename("downloads/$filename", "downloads/$newfilename");
+include "gzip.php";
+
 echo "Downloading $url "; 
 echo "<br>";
 echo "to ";

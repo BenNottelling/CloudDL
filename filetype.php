@@ -10,5 +10,6 @@ $mime_types = array(//mime_type then extension, feel free to update it from here
 	'application/x-7z-compressed' => '7z',
 	'application/x-tar' => 'tar',
 );
-$newfilename = $filename . '.' . $mime_types[$mime];
+$filetype = $mime_types[$mime];
+$newfilename = $filename . '.' . $filetype;
 ?>
